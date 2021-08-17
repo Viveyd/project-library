@@ -7,7 +7,29 @@
     <body>
         <main>
         </main>
-        <button id='add-btn'>Add Book</button>
+        <button id='newBook-btn'> New Book </button>
+        <form id='newForm' data-hidden='true'> 
+            <label class='form-element'> Title <br/>
+                <input id='title-input' type="text" required>
+            </label>
+            <label class='form-element'> Author <br/>
+                <input id='author-input' type="text" required>
+            </label>
+            <label class='form-element'> Number of Pages <br/>
+                <input id='num-input' type="text" required>
+            </label>
+            <label class='form-element'> Read <br/>
+                <label> Finished
+                    <input type="radio" name='read-status' value='finished'>
+                </label>
+                <label> Unfinished
+                    <input type="radio" name='read-status' value="unfinished">
+                </label>
+            </label>
+            <button id='add-btn'class='form-element'>
+                Add book
+            </button>
+        </form>
         <script src="index.js"></script>
     </body>
 </html>

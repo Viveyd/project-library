@@ -1,8 +1,33 @@
 table{
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
 }
-tr{
-    border-top: 1px solid black;
-
+.table-cell{
+    
+}
+form{
+    display: none;
+    border: 1px solid black;
+    flex-direction: column;
+    margin: 0;
+    padding: 5px;
+    width: 235px;
+    justify-content: center;
+    align-items: center;
+}
+.form-element{
+    text-align: center;
+    margin: 5px;
+}
+input[type='text']{
+    width: auto;
+}
+#add-btn{
+    width: 85%
+}
+label{
+    font-size: 14px;
+}
+th{
+    font-size: 1.5em;
+    font-weight: bold;
 }
