@@ -1,0 +1,181 @@
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+main{
+    height: 100%;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 0 150px;
+    overflow: scroll;
+    overflow-x: hidden;
+    align-items: center;
+}
+main>h1{
+    background-color: burlywood;
+    position: fixed;
+    display: grid;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 59.3%;
+    height: 10%;
+    margin: 0;
+}
+#bookshelves-con{
+    background: wheat;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 100%;
+    width: 92%;
+    align-items: center;
+    padding: 1em;
+    margin-top: 13%
+}
+
+.book-section-con{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.book-section-l, .book-section-r{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 47.5%;
+    background-color: burlywood;
+    
+    overflow: hidden;
+}
+.book-section-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    height: 100%;
+    width: 9%;
+}
+.book-section-l> .book-section-label> label{
+    margin: 0;
+    color: green;
+    transform: rotate(90deg);
+}
+.book-section-r> .book-section-label> label{
+    margin: 0;
+    color: green;
+    transform: rotate(270deg);
+}
+.book-shelf{
+    border: 1px solid brown;
+    height: 99%;
+    flex-basis: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.books{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 0 0 44px;
+    border: 1px solid black;
+    margin-left: 3px;
+    margin-right: 3px;
+    background: brown;
+    color: white;
+    height: 95%;
+}
+.books:hover{
+    border: 3px solid goldenrod;
+    scale: 1.1  ;
+}
+.display-form-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 40px;
+    border: 1px solid black;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: flex;
+    height: 95%;
+
+}
+.display-form-btn:hover{
+    border: 3px solid red;
+}
+
+div#preview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+}
+
+
+
+#preview>#title{
+    font-size:  4em;
+    flex: 0 0 10%;
+}
+#preview>#author{
+    font-size: 2em;
+    font-weight: lighter;
+    flex: 0 0 25%;
+}
+#preview>#date{
+    justify-self: flex-end;
+ 
+}
+
+form{
+    position: absolute;
+    background: burlywood;
+    top: 40%;
+    left: 43%;
+    display: none;
+    border: 1px solid black;
+    flex-direction: column;
+    margin: 0;
+    padding: 5px;
+    width: 235px;
+    justify-content: center;
+    align-items: center;
+}
+.form-element{
+    text-align: center;
+    margin: 5px;
+}
+input[type='text']{
+    width: auto;
+}
+label{
+    font-size: 14px;
+}
+#exit-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    border: 0;
+    background-color: burlywood;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="indexv1.css">
+        <script src="indexv1.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <h1 id='title'> Your library </h1>
+            <div id='bookshelves-con'> 
+                <form>
+                    <label>Search
+                        <input type='text'>
+                    </label>
+                    <label> By:</label>
+                    <label> <input type='radio' name='search-filter'> ID </label>
+                    <label> <input type='radio' name='search-filter'> Title </label>
+                    <label> <input type='radio' name='search-filter'> Author </label>
+                </form>
+                
+                <div class='book-section-con'>
+                    <div class="book-section-l"> 
+                        <div class='book-shelf'>
+                           
+                        </div>
+                        <div class='book-section-label' class><label>Action</label></div>
+                    </div>
+                    <div class="book-section-r"> 
+                        <div class='book-section-label' class><label>Romance</label></div>
+                        <div id='book-shelf-a' class='book-shelf'>          
+                        </div>
+                    </div>
+                </div>
+                <div class='book-section-con'>
+                    <div class="book-section-l"> 
+                        <div class='book-shelf'> 
+                        </div>
+                        <div class='book-section-label' class><label>Fantasy</label></div>
+                    </div>
+                    <div class="book-section-r"> 
+                        <div class='book-section-label' class><label>Realism</label></div>
+                        <div class='book-shelf'>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class='book-section-con'>
+                    <div class="book-section-l"> 
+                        <div class='book-shelf'>
+                        </div>
+                        <div class='book-section-label' class><label>Modern</label></div>
+                    </div>
+                    <div class="book-section-r"> 
+                        <div class='book-section-label' class><label>Contemporary</label></div>
+                        <div class='book-shelf'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id='preview'>
+            <h2 id='author' class="book-preview">Author</h2>
+            <h1 id='title' class="book-preview">Title</h1>
+            <h3 id='date' class="book-preview"> 1990</h3>
+        </div>
+        <form id='add-book-form' data-hidden='true'> 
+            <label class='form-element'> Title <br/>
+                <input id='title-input' type="text" required>
+            </label>
+            <label class='form-element'> Author <br/>
+                <input id='author-input' type="text" required>
+            </label>
+            <label class='form-element'> Number of Pages <br/>
+                <input id='num-input' type="text" required>
+            </label>
+            <label class='form-element'> Read <br/>
+                <label> Finished
+                    <input type="radio" name='read-status' value='finished'>
+                </label>
+                <label> Unfinished
+                    <input type="radio" name='read-status' value="unfinished">
+                </label>
+            </label>
+            <button id='add-btn'class='form-element'>
+                Add book
+            </button>
+            <button id='exit-btn'> X </button>
+        </form>
+    </body>
+</html>
