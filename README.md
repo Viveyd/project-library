@@ -1,2 +1,2 @@
 # project-library
-Small library application that allows to add books, edit their properties, and remove books.
+Small virtual library application that can store a collection of books that users can browse through, edit, and delete. Data stored locally only (localStorage).

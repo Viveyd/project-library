@@ -1,10 +1,72 @@
-table{
-    border: 1px solid black;
+html{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-size: 12px;
+    width: 100%;
 }
-.table-cell{
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+header, main, footer{
+    width: 100%;
+}
+header{
+    display: flex;
+    flex-basis: 10%;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    background-color: #242729;
+    align-items: center;
     
+
 }
-form{
+header>h1{
+
+    margin: 0;
+    margin-left: 1rem;
+    color: #cdd9e5;
+    font-family: 'Josefin sans', sans-serif;
+}
+main{
+    flex-basis: 80%;
+    display: flex;
+}
+footer{
+    flex-basis: 10%;
+    background-color: #242729;
+    color: #bbc0c4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer>p{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-basis: 50%;
+}
+footer>a{
+    margin-left: 2rem;
+    flex-basis: 50%;
+    text-align: end;
+    padding-right: 1rem;
+}
+#github-logo{
+    width: 100px;
+}
+#add-book-form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: burlywood;
+    top: 33%;
+    left: 43%;
     display: none;
     border: 1px solid black;
     flex-direction: column;
@@ -21,13 +83,203 @@ form{
 input[type='text']{
     width: auto;
 }
-#add-btn{
-    width: 85%
-}
 label{
     font-size: 14px;
 }
-th{
-    font-size: 1.5em;
+#exit-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
     font-weight: bold;
+    border: 0;
+    background-color: burlywood;
+}
+main>#library-con{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#library-con>#search-form{
+    background-color:#ffd454;
+    flex-basis: 10%;
+    display: flex;
+    padding-left: 2rem;
+    justify-content: start;
+    align-items: center;
+
+}
+#library-con>#bookshelves-con{
+    flex-basis: 90%;   
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: #00615f;
+    /* flex-grow: initial; */
+}
+#bookshelves-con>.rows-shelves{ 
+    height: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    background: transparent;
+    /* flex-grow: initial; */
+}
+
+.rows-shelves>.book-section{
+    flex-basis: 33.3%; 
+    background: transparent;
+    /* border: 1px solid black; */
+}
+.book-section>.book-shelf{
+    width: 80%;
+    height: 85%;
+    border-bottom: 5px solid black;
+    border-radius: 10px;
+    margin-left: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    align-items: flex-end;
+    background: transparent;
+    overflow-x: auto;
+}
+
+.book-section>.book-section-label{
+    text-align: center;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.book-shelf>.books{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url('book-spine.png');
+    border-top-left-radius: 9%;
+    border-top-right-radius: 9%;
+    background-size: cover;
+    color: white;
+    height: 80%;
+    width: 15%;
+    border: 1px solid black;
+}
+
+.display-form-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 80%;
+    width: 15%;
+    background: grey;
+    border: none;
+
+}
+.display-form-btn:hover{
+    border: 3px solid red;  
+}
+
+
+
+main>#book-view-panel{
+    flex-basis: 30%;
+    background-image: url('a-book-3057901_1920.png');
+    background-size: 100% 100%; 
+    color: #ffd454;
+    background-color: #00615f;
+    font-family: 'Meera Inimai', sans-serif;
+}
+
+
+/*Preview book*/
+#view-form{
+    border: 3px solid darkolivegreen;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 85%;
+    height: 90%;
+    margin-top: 3.5%;
+    margin-left: 4%;
+}
+#view-form>.book-preview, #view-form>.action-bar{
+    width: 100%;
+    margin: 0;
+    overflow-x: auto;
+    word-break: break-all;
+    font-size: 1.5rem;
+    margin-top: 3.5%;
+    font-weight: bold;
+}
+#view-form>#author-preview{
+    flex-basis: 15%;
+}
+#view-form>#title-preview{
+    flex-basis: 45%;
+    font-size: 3.5rem;
+    
+}
+#view-form>#date-preview{
+    flex-basis: 12.5%;
+}
+#view-form>#status-preview{
+    flex-basis: 15%;
+    
+}
+#view-form>#id-preview{
+    flex-basis: 12.5%;
+}
+#view-form>.action-bar{
+    flex-basis: 10%;
+    justify-content: space-between;
+    display: none;
+}
+
+/*Edit book form */
+#edit-form{
+    width: 83%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 4%;
+    margin-bottom: 9%;
+    display: none;
+    flex-direction: column; 
+    text-align: center;
+}
+#edit-form>.edit-view{
+
+    width: 100%;
+}
+#edit-form>#author-edit{
+    flex-basis: 15%;
+}
+#edit-form>#title-edit{
+    flex-basis: 40%;
+}
+#edit-form>#date-edit{
+    flex-basis: 12.5%;
+}
+#edit-form>#status-edit{
+    flex-basis: 12.5%;
+}
+#edit-form>#id-edit{
+    flex-basis: 10%;
+    margin: 0;
+}
+#edit-form>#edit-action-bar{
+    display: flex;
+    flex-basis: 10%;
+    justify-content: space-between;
+}
+.edit-view>textarea, input#date-area{
+    width: 98%;
+    resize: none;
+    text-align: center;
+}
+#title-edit>textarea{
+    height: 84%;
+}
+a{
+    color: silver;
 }

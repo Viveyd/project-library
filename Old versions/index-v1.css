@@ -1,0 +1,246 @@
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+body{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+main{
+    height: 100%;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main>h1{
+    display: fles;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3vw;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+}
+
+#search-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#bookshelves-con{
+    overflow: scroll;
+    overflow-x: hidden;
+    background-image: url('shelves-con-background1.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 90%;
+    width: 92%;
+    align-items: center;
+    padding: 1em;
+}
+
+.book-section-con{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.book-section-l, .book-section-r{
+    display: flex;
+    margin: 0;
+    padding: 0.5em;
+    height: 100%;
+    width: 47.5%;
+    overflow: hidden;
+}
+.book-section-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    height: 100%;
+    width: 9%;
+}
+.book-section-l> .book-section-label> label{
+    margin: 0;
+    transform: rotate(90deg);
+}
+.book-section-r> .book-section-label> label{
+    margin: 0;
+  
+    transform: rotate(270deg);
+}
+.book-shelf{
+    border-bottom: 5px solid sienna;
+    border-radius: 5%;
+    height: 99%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    /* background-image: url('wooden-textured-background.jpg');
+    background-size: cover; */
+    flex-basis: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.books{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 0 0 44px;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-image: url('book-spine.png');
+    border-top-left-radius: 9%;
+    border-top-right-radius: 9%;
+    background-size: cover;
+    color: white;
+    height: 95%;
+}
+.books:hover{
+    border: 3px solid goldenrod;
+    scale: 1.1  ;
+}
+.display-form-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 40px;
+    border: 1px solid black;
+    background-color: burlywood;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: flex;
+    height: 95%;
+
+}
+.display-form-btn:hover{
+    border: 3px solid red;
+}
+
+
+div.preview{
+    display: flex;
+    background-color: lightslategray;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gold;
+    padding-top: 5%;
+    height: 74%;
+    padding-bottom: 2%;
+}
+.book-preview{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+#book-preview-bg{
+    width: 100%;
+    height: 100%;
+}
+
+textarea{
+    width: 100%;
+}
+#title-preview{
+    font-size:  4em;
+    flex-grow: 3;
+}
+#author-preview{
+    flex-grow: 1;
+}
+#date-preview{
+    flex-grow: 1;
+}
+#id-preview{
+    font-size: 1.5em;
+    flex-grow: 1;
+}
+#status-preview{
+    flex-grow: 1;
+    flex-basis: 10px;
+ 
+}
+.action-bar{
+    display: flex;
+    /*Top right layout */
+    /* flex-direction: row-reverse;
+    position: absolute; 
+    margin-top: -1%;
+    margin-left: 25%; */
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 10%;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.action-bar-buttons{
+    width: 10%;
+    background: transparent;
+    border: none;
+    color: gold;
+}
+
+
+body>form{
+    position: absolute;
+    background: burlywood;
+    top: 40%;
+    left: 43%;
+    display: none;
+    border: 1px solid black;
+    flex-direction: column;
+    margin: 0;
+    padding: 5px;
+    width: 235px;
+    justify-content: center;
+    align-items: center;
+}
+.form-element{
+    text-align: center;
+    margin: 5px;
+}
+input[type='text']{
+    width: auto;
+}
+label{
+    font-size: 14px;
+}
+#exit-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    border: 0;
+    background-color: burlywood;
+}
+footer{
+    width: 100%;
+    background-color: lightslategray;
+}

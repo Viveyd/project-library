@@ -1,35 +1,120 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="index.css">
         
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap" rel="stylesheet"> 
+        <link rel='stylesheet' href='index.css'>
     </head>
     <body>
+        <header>
+            <h1 id='title'> My Virtual Library </h1>
+        </header>
         <main>
+            <section id='library-con'>
+                <form id='search-form'>
+                    <label>Search
+                        <input id='search-bar' type='text'>
+                    </label>
+                    <label> By:</label>
+                    <label> <input type='radio' name='search-filters' value="id" checked> ID </label>
+                    <label> <input type='radio' name='search-filters' value="title"> Title </label>
+                    <label> <input type='radio' name='search-filters' value="author"> Author </label>
+                </form>
+                <div id='bookshelves-con'> 
+                    <div id='row-1-shelves' class='rows-shelves'> 
+                        <div class="book-section"> 
+                            <div id='book-shelf-a' class='book-shelf'></div>
+                            <div class='book-section-label' class><label>Shelf 1</label></div>
+                        </div>
+                        <div class="book-section"> 
+                            <div id='book-shelf-b' class='book-shelf'></div>
+                            <div class='book-section-label' class><label>Shelf 2</label></div>       
+                        </div>
+                        <div class="book-section"> 
+                            <div id='book-shelf-c' class='book-shelf'></div>
+                            <div class='book-section-label' class><label>Shelf 3</label></div>
+                        </div>
+                    </div>
+                    <div id='row-2-shelves' class='rows-shelves'> 
+                        <div class="book-section"> 
+                            <div id='book-shelf-d' class='book-shelf'> </div>
+                            <div class='book-section-label' class><label>Shelf 4</label></div>
+                        </div>
+                        <div class="book-section"> 
+                            <div id='book-shelf-e' class='book-shelf'></div>  
+                            <div class='book-section-label' class><label>Shelf 5</label></div>
+                        </div>
+                        <div class="book-section">
+                            <div id='book-shelf-f' class='book-shelf'></div>
+                            <div class='book-section-label' class><label>Shelf 6</label> </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div id='book-view-panel' class='preview'>
+                <form id='edit-form'>
+                    <label id='author-edit' class='edit-view'>Author<br/><textarea id='author-area'></textarea></label>
+                    <label id='title-edit'  class='edit-view'>Title<br/><textarea id='title-area'></textarea></label>
+                    <label id='date-edit'  class='edit-view'>Date Published<br/><input type="date" id='date-area'></input></label>
+                    <label id='status-edit'  class='edit-view'> Reading Status: <br/>
+                        <label><input type='radio' name='status-preview-radio'>Finished</label>
+                        <label><input type='radio' name='status-preview-radio'>Unfinished</label>
+                    </label>
+                    <h3 id='id-edit' class='edit-view'> ID </h3>
+                    <div id='edit-action-bar'>
+                        <button id='cancel-edit' class='action-bar-buttons edit-view'> Cancel </button>
+                        <button id='save-edit' class='action-bar-buttons edit-view'> Save </button>
+                    </div>
+                </form>
+                
+                <form id='view-form'>
+                    <h2 id='author-preview' class="book-preview">Author</h2>
+                    <h1 id='title-preview' class="book-preview">Title</h1>
+                    <h3 id='date-preview' class="book-preview"> Date Published</h3>
+                    <h3 id='status-preview' class="book-preview"> Reading Status</h3>
+                    <h3 id='id-preview' class="book-preview"> ID </h3>
+                    <div id='action-bar-1' class="action-bar">
+                        <button id='exit-action' class='action-bar-buttons'> Back </button>
+                        <button id='edit-action' class='action-bar-buttons'> Edit </button>
+                        <button id='delete-action'class='action-bar-buttons'> Delete </button>
+                     </div>
+                </form>
+
+                
+            </div>
         </main>
-        <button id='newBook-btn'> New Book </button>
-        <form id='newForm' data-hidden='true'> 
+        <form id='add-book-form' data-hidden='true'> 
             <label class='form-element'> Title <br/>
                 <input id='title-input' type="text" required>
             </label>
             <label class='form-element'> Author <br/>
                 <input id='author-input' type="text" required>
             </label>
-            <label class='form-element'> Number of Pages <br/>
-                <input id='num-input' type="text" required>
+            <label class='form-element'> Date Published<br/>
+                <input id='date-input' type="date" required>
             </label>
-            <label class='form-element'> Read <br/>
+            <label class='form-element'> Read Status <br/>
                 <label> Finished
-                    <input type="radio" name='read-status' value='finished'>
+                    <input type="radio" name='read-status' value='Finished' checked>
                 </label>
                 <label> Unfinished
-                    <input type="radio" name='read-status' value="unfinished">
+                    <input type="radio" name='read-status' value="Unfinished">
                 </label>
             </label>
             <button id='add-btn'class='form-element'>
                 Add book
             </button>
+            <button id='exit-btn'> X </button>
         </form>
-        <script src="index.js"></script>
+        <footer>
+            <p> This was a project that was made as  part of <a href="https://www.theodinproject.com/">The Odin Project's<a> curriculum</p>
+            <a href="https://github.com/Viveyd/project-library"> <img id='github-logo' src="GitHub_Logo_White.png"> </a>
+        </footer>
+        <script src="index.js">
+        </script>
     </body>
 </html>

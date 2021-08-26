@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="indexv1.css">
+        <script src="indexv1.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <h1 id='title'> My Virtual Library </h1>
+            <div id='bookshelves-con'> 
+                <form id='search-form'>
+                    <label>Search
+                        <input id='search-bar' type='text'>
+                    </label>
+                    <label> By:</label>
+                    <label> <input type='radio' name='search-filters' value="id" checked> ID </label>
+                    <label> <input type='radio' name='search-filters' value="title"> Title </label>
+                    <label> <input type='radio' name='search-filters' value="author"> Author </label>
+                </form>
+                
+                <div class='book-section-con'>
+                    <div class="book-section-l"> 
+                        <div id='book-shelf-a' class='book-shelf'>
+                           
+                        </div>
+                        <div class='book-section-label' class><label>Action</label></div>
+                    </div>
+                    <div class="book-section-r"> 
+                        <div class='book-section-label' class><label>Romance</label></div>
+                        <div id='book-shelf-b' class='book-shelf'>          
+                        </div>
+                    </div>
+                </div>
+                <div class='book-section-con'>
+                    <div class="book-section-l"> 
+                        <div id='book-shelf-c' class='book-shelf'> 
+                        </div>
+                        <div class='book-section-label' class><label>Fantasy</label></div>
+                    </div>
+                    <div class="book-section-r"> 
+                        <div class='book-section-label' class><label>Realism</label></div>
+                        <div id='book-shelf-d' class='book-shelf'>  
+                        </div>
+                    </div>
+
+                </div>
+                <div class='book-section-con'>
+                    <div class="book-section-l"> 
+                        <div id='book-shelf-e' class='book-shelf'>
+                        </div>
+                        <div class='book-section-label' class><label>Modern</label></div>
+                    </div>
+                    <div class="book-section-r"> 
+                        <div class='book-section-label' class>
+                            <label>Contemporary
+                                <button class='label-edit'> * </button>
+                            </label> 
+                        </div>
+                        <div id='book-shelf-f' class='book-shelf'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id='view-preview' class='preview'>
+            <h2 id='author-preview' class="book-preview">Author</h2>
+            <h1 id='title-preview' class="book-preview">Title</h1>
+            <h3 id='date-preview' class="book-preview"> Date</h3>
+            <h4 id='id-preview' class="book-preview"> ID </h1>
+            <h4 id='status-preview' class="book-preview"> Reading Status</h3>
+            <div class='action-bar' display='none'>
+                <button class='action-bar-buttons'> X </button>
+                <button class='action-bar-buttons'> Edit </button>
+                <button class='action-bar-buttons'> Delete </button>
+            </div>
+            <!-- <img src="a-book-3057901_1920.png" id='book-preview-bg'>  -->
+            
+        </div>
+        <!-- <div id='edit-preview' class='preview' style="display: none;">
+            <h2 id='author-preview' class="book-preview"><textarea></textarea></h2>
+            <h1 id='title-preview' class="book-preview"><textarea></textarea></h1>
+            <h3 id='date-preview' class="book-preview"> <textarea></textarea></h3>
+            <h4 id='id-preview' class="book-preview"> 
+                <label>
+                    <input type="radio">
+                    Finished
+                </label>
+                <label>
+                    <input type="radio">
+                    Unfinished
+                </label>
+            </h4>
+            <h4 id='status-preview' class="book-preview" > <textarea></textarea></h3>
+            <div class='action-bar'>
+                <button class='action-bar-buttons'> Back </button>
+                <button class='action-bar-buttons'> Save </button>
+            </div>
+        </div>
+        <form id='add-book-form' data-hidden='true'> 
+            <label class='form-element'> Title <br/>
+                <input id='title-input' type="text" required>
+            </label>
+            <label class='form-element'> Author <br/>
+                <input id='author-input' type="text" required>
+            </label>
+            <label class='form-element'> Date <br/>
+                <input id='date-input' type="text" required>
+            </label>
+            <label class='form-element'> Read <br/>
+                <label> Finished
+                    <input type="radio" name='read-status' value='finished' checked>
+                </label>
+                <label> Unfinished
+                    <input type="radio" name='read-status' value="unfinished">
+                </label>
+            </label>
+            <button id='add-btn'class='form-element'>
+                Add book
+            </button>
+            <button id='exit-btn'> X </button>
+        </form> -->
+        
+    </body>
+</html>
